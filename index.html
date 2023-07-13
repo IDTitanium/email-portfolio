@@ -33,21 +33,21 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <div id="Demo1" class="w3-hide w3-animate-left">
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
       <div class="w3-container bold">
-        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:15%;height: 15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
         <h6>Subject: Hire me!</h6>
         <p>Dear Hiring Manager, I hope this email finds you well. My name is ...</p>
       </div>
     </a>
      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
         <h6>Subject: My Work Experience!</h6>
         <p>Work Experience: Backend Engineer - Reliance...</p>
       </div>
     </a>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
         <p>Welcome!</p>
       </div>
     </a>
@@ -77,7 +77,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
 
       <label>Subject</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text" name="subject" required>
+      <input class="w3-input w3-border w3-margin-bottom" type="text" name="subject" required id="subject">
 
       <textarea class="w3-input w3-border" name="content" style="height:150px" placeholder="What's on your mind?" required></textarea>
 
@@ -105,10 +105,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <div id="Borge" class="w3-container person">
   <br>
-  <img class="w3-round  w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <img class="w3-round  w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:20%;">
   <h5 class="w3-opacity">Subject: Hire me!</h5>
   <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent"></span>.</h4>
-  <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id01').style.display='block'">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id01').style.display='block'; document.getElementById('subject').innerHTML='Re: Hire me!'">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   <p>Dear Hiring Manager,</p>
@@ -138,7 +138,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <div id="Jane" class="w3-container person">
   <br>
-  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:20%;">
   <h5 class="w3-opacity">Subject: None</h5>
   <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent2"></span>.</h4>
   <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
@@ -195,7 +195,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <div id="John" class="w3-container person">
   <br>
-  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1573225293/Idris_Lawal_Softwware_Engineer.jpg" style="width:20%;">
   <h5 class="w3-opacity">Subject: None</h5>
   <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent3"></span>.</h4>
   <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
