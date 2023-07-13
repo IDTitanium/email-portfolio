@@ -66,16 +66,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Send Mail</h2>
     </div>
     <div class="w3-panel">
-    <form action="https://formsubmit.co/idriseun222@gmail.com" method="post" enctype="text/plain">
+    <form action="https://formsubmit.co/99404daae6d7d50548a640304f041b1d" method="post" enctype="text/plain">
         <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text" value="idriseun222@gmail.com" disabled>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" name="me" value="idriseun222@gmail.com" disabled>
+
       <label>From</label>
       <input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
+
       <label>Name</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
-      <label>Subject</label>
 
+      <label>Subject</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text" name="subject" required>
+
       <textarea class="w3-input w3-border" name="content" style="height:150px" placeholder="What's on your mind?" required></textarea>
 
       <input type="hidden" name="_next" value="https://idrislawal.me/thankyou.html">
@@ -83,6 +86,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
       <div class="w3-section">
         <button type="submit" class="w3-button w3-green w3-light-grey" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></button> 
+
         <a class="w3-button w3-right" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
       </div>  
     </form>
@@ -104,7 +108,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <img class="w3-round  w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
   <h5 class="w3-opacity">Subject: Hire me!</h5>
   <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent"></span>.</h4>
-  <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id01').style.display='block'">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   <p>Dear Hiring Manager,</p>
