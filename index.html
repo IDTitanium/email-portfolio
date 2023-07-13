@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>idrislawal.me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {padding: 16px}
+
+.bold {
+    font-weight: 900;
+}
+
+.unbold {
+    font-weight: 500;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><img src="https://res.cloudinary.com/idtitanium/image/upload/v1689198190/idrislawal.me_1.png" style="width:60%;"></a>
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+  class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">New Message <i class="w3-padding fa fa-pencil"></i></a>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <div id="Demo1" class="w3-hide w3-animate-left">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close();" id="firstTab">
+      <div class="w3-container bold">
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <h6>Subject: Hire me!</h6>
+        <p>Dear Hiring Manager, I hope this email finds you well. My name is ...</p>
+      </div>
+    </a>
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <h6>Subject: My Work Experience!</h6>
+        <p>Work Experience: Backend Engineer - Reliance...</p>
+      </div>
+    </a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:15%;"><span class="w3-opacity w3-large">Idris Lawal</span>
+        <p>Welcome!</p>
+      </div>
+    </a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+</nav>
+
+<!-- Modal that pops up when you click on "New Message" -->
+<div id="id01" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+       <span onclick="document.getElementById('id01').style.display='none'"
+       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Send Mail</h2>
+    </div>
+    <div class="w3-panel">
+    <form action="https://formsubmit.co/99404daae6d7d50548a640304f041b1d" method="post" enctype="text/plain">
+        <label>To</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text" value="idriseun222@gmail.com" disabled>
+      <label>From</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
+      <label>Name</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
+      <label>Subject</label>
+
+      <input class="w3-input w3-border w3-margin-bottom" type="text" name="subject" required>
+      <textarea class="w3-input w3-border" name="content" style="height:150px" placeholder="What's on your mind?" required></textarea>
+
+      <input type="hidden" name="_next" value="https://idrislawal.me/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="w3-section">
+        <button type="submit" class="w3-button w3-green w3-light-grey" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></button> 
+        <a class="w3-button w3-right" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+      </div>  
+    </form>
+        
+    </div>
+  </div>
+</div>
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+<div id="Borge" class="w3-container person">
+  <br>
+  <img class="w3-round  w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: Hire me!</h5>
+  <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent"></span>.</h4>
+  <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Dear Hiring Manager,</p>
+  <p>I hope this email finds you well. My name is Idris Lawal, and I am writing to express my interest in the Software Engineer position at your company. With a strong background in software engineering and a passion for creating efficient and scalable solutions, I believe I would be a valuable addition to your team.</p>
+  <p>Throughout my 5+ years of software development experience, I have honed my skills in Laravel/PHP for backend development, with a particular focus on building robust and maintainable applications. I am also excited to mention that I have recently embarked on a journey to master Golang, as I believe in continuously expanding my knowledge and staying up to date with emerging technologies.</p>
+  <p>In addition to my backend expertise, I am proficient in frontend development using Vue.js and Nuxt.js, crafting intuitive user interfaces and ensuring seamless user experiences. I also have working knowledge of Node.js and Express.js, allowing me to contribute effectively across the entire software development stack.</p>
+  <p>My enthusiasm for problem-solving, combined with my ability to collaborate and communicate effectively, has allowed me to thrive in fast-paced and dynamic environments. I pride myself on my attention to detail, my commitment to delivering high-quality code, and my eagerness to embrace new challenges.</p>
+  <p>Here are a few highlights of my qualifications:</p>
+  <p>
+    <ul>
+        <li>Strong proficiency in Laravel/PHP for backend development, ensuring efficient and scalable solutions.</li>
+        <li>Proficient in Vue.js and Nuxt.js for building intuitive and responsive frontend applications.</li>
+        <li>Developing expertise in Golang, with a focus on creating high-performance and concurrent systems.
+        </li>
+        <li>Familiarity with Node.js and Express.js, enabling effective full-stack development.</li>
+        <li>Proven track record of delivering projects on time and within budget while adhering to best coding practices.</li>
+        <li>Strong problem-solving skills and ability to analyze complex issues to find innovative solutions.</li>
+        <li>Excellent communication and collaboration skills, allowing for seamless teamwork and efficient project management.
+        </li>
+    </ul>
+  </p>
+  <p>I have attached my resume for your convenience, providing further details on my experience and skills. I would welcome the opportunity to discuss how my background aligns with your company's goals and how I can contribute to your team's success. Thank you for considering my application.</p>
+  <p>I look forward to the possibility of discussing this opportunity further.</p>
+  <p>Best Regards, <br>Idris Lawal</p>
+  <p>idrislawal.me</p>
+</div>
+
+<div id="Jane" class="w3-container person">
+  <br>
+  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: None</h5>
+  <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent2"></span>.</h4>
+  <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Work Experience:</p>
+  <p>Backend Engineer - Reliance Health (July 2022 - Present)</p>
+  <p>
+    <ul>
+        <li>Collaborated with a talented team to develop and maintain backend systems using Laravel/PHP, ensuring robust and scalable solutions.</li>
+        <li>Contributed to the design and implementation of APIs, optimizing performance and enhancing user experience.</li>
+        <li>Actively participated in code reviews, ensuring adherence to coding standards and best practices.</li>
+        <li>Played a key role in troubleshooting and resolving issues, ensuring smooth operation of the platform.</li>
+        <li>Collaborated closely with frontend developers to deliver seamless end-to-end solutions.</li>
+    </ul>
+  </p>
+  <p>Senior Software Engineer - Kloud Commerce (2021 - 2022)</p>
+  <p>
+    <ul>
+    <li>Developed and maintained RESTful APIs, enabling seamless integration with third-party services and platforms.</li>
+    <li>Conducted code reviews and provided constructive feedback to ensure high-quality code and adherence to coding standards.</li>
+    <li>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver projects within tight deadlines.</li>
+    <li>Mentored junior team members, fostering their professional growth and promoting knowledge sharing within the team.
+    </li>
+  </ul>
+  </p>
+  <p>Software Engineer - Gloopro (2019 - 2022)</p>
+  <p>
+    <ul>
+        <li>Developed and maintained backend systems using Laravel/PHP, contributing to the company's flagship product.</li>
+        <li>Collaborated closely with frontend developers to deliver seamless user experiences and optimize performance.</li>
+        <li>Conducted thorough testing and debugging to ensure the delivery of high-quality, bug-free code.</li>
+        <li>Actively participated in sprint planning and retrospectives, contributing valuable insights for process improvement.</li>
+        <li>Assisted in the development and optimization of database structures and queries for improved system performance.</li>
+    </ul>
+  </p>
+  <p>IT Support Personnel - Health Assur (2018 - 2019) </p>
+  <p>
+    <ul>
+        <li>Provided technical support and troubleshooting assistance to end users, ensuring smooth operation of IT infrastructure and software applications.</li>
+        <li>Conducted hardware and software installations, upgrades, and maintenance to meet organizational needs.
+        </li>
+        <li>Assisted in the development and implementation of IT policies and procedures, ensuring compliance and security.
+        </li>
+        <li>Collaborated with cross-functional teams to address IT-related issues, facilitating effective communication and problem resolution.
+        </li>
+        <li>Conducted training sessions to enhance end users' technical skills and knowledge.
+        </li>
+    </ul>
+  </p>
+  
+  <p>Sincerely,<br>Idris Lawal</p>
+</div>
+
+<div id="John" class="w3-container person">
+  <br>
+  <img class="w3-round w3-animate-top" src="https://res.cloudinary.com/idtitanium/image/upload/v1554325108/myAvatar_1.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: None</h5>
+  <h4><i class="fa fa-clock-o"></i> From Idris Lawal, <span id="datecurrent3"></span>.</h4>
+  <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Welcome.</p>
+  <p>That's it!</p>
+</div>
+     
+</div>
+
+<script>
+var openInbox = document.getElementById("myBtn");
+openInbox.click();
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; 
+    x.previousElementSibling.className += " w3-red";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-red", "");
+  }
+}
+
+showDate()
+
+function showDate() {
+    let dt = new Date()
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('datecurrent').innerHTML = dt.toLocaleDateString("en-ng", options)
+    document.getElementById('datecurrent2').innerHTML = dt.toLocaleDateString("en-ng", options)
+    document.getElementById('datecurrent3').innerHTML = dt.toLocaleDateString("en-ng", options)
+}
+
+openMail("Borge")
+function openMail(personName) {
+  var i;
+  var x = document.getElementsByClassName("person");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x = document.getElementsByClassName("test");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" w3-light-grey", "");
+  }
+  document.getElementById(personName).style.display = "block";
+  event.currentTarget.className += " w3-light-grey";
+}
+
+
+</script>
+
+<script>
+var openTab = document.getElementById("firstTab");
+openTab.click();
+</script>
+
+</body>
+</html> 
